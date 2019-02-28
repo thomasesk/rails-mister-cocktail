@@ -1,0 +1,11 @@
+<div class="cards padding">
+  <% @cocktails.each do |cocktail| %>
+    <div class="card" style="width: 18rem;">
+      <div class="card-img-top" style="background-color: #254667; height: 15px"></div>
+      <div class="card-body">
+        <h5 class="card-title"><%=cocktail.name %></h5>
+        <p class="card-text"><%= link_to "Recipe", cocktail_path(cocktail) %></p>
+      </div>
+    </div>
+  <% end %>
+</div>

@@ -3,3 +3,43 @@
 // @import "dashboard";
 // @import "profile";
 // @import "map";
+.banner {
+  height: calc(100vh - 70px);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.typed {
+  font-size: 50px;
+  color: white;
+}
+
+.banner-link {
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+  opacity: 0.6;
+}
+
+.banner-link:hover {
+  color: white;
+  opacity: 1
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 70px;
+}
+
+.padding {
+  padding-top: 70px;
+}
+
+.card {
+  margin: 30px;
+}
