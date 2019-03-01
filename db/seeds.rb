@@ -7,6 +7,15 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 Ingredient.destroy_all
 
-Ingredient.create(name: "lemon")
-Ingredient.create(name: "ice")
-Ingredient.create(name: "mint leaves")
+Ingredient.create(name: "Lemon")
+Ingredient.create(name: "Ice")
+Ingredient.create(name: "Mint leaves")
+Ingredient.create(name: "Kiwi")
+Ingredient.create(name: "Orange")
+Ingredient.create(name: "Cointreau")
+Ingredient.create(name: "Benedictine")
+Ingredient.create(name: "Cognac")
+Ingredient.create(name: "Mozart")
+Ingredient.create(name: "Apple Juice")
+Ingredient.create(name: "Whisky")
+Ingredient.create(name: "Vodka")

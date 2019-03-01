@@ -1,4 +1,4 @@
-<div class="cards padding">
+<div class="cards">
   <% @cocktails.each do |cocktail| %>
     <div class="card main-card background-image" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('<%= cl_image_path cocktail.photo, crop: :fill if cocktail.photo.present?%>')">
       <div class="card-body">
