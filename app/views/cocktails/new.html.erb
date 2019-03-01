@@ -1,8 +1,8 @@
-<div class="container" style="margin-top: 50px">
+<div class="container form-new" style="margin-top: 50px">
   <h1>Add your own cocktail</h1>
   <%= simple_form_for @cocktail do |f| %>
-    <%= f.input :name %>
-    <%= f.input :photo %>
+    <%= f.input :name, label: false, placeholder: "Your cocktail's little name" %>
+    <%= f.input :photo, label: false %>
     <%= f.input :photo_cache, as: :hidden %>
     <%= f.button :submit, class: "btn btn-outline-dark"%>
   <% end %>
