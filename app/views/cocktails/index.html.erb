@@ -1,6 +1,7 @@
 <div class="cards padding">
   <% @cocktails.each do |cocktail| %>
-    <div class="card" style="width: 18rem;">
+    <div class="card" style="width: 18rem; background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+         url('<%= cl_image_path cocktail.photo, height: 300, width: 400, crop: :fill if cocktail.photo.present?%>')">
       <div class="card-img-top" style="background-color: #254667; height: 15px"></div>
       <div class="card-body">
         <h5 class="card-title"><%=cocktail.name %></h5>
