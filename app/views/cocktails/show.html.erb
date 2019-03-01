@@ -1,8 +1,15 @@
-<h1><%= @cocktail.name %></h1>
-<%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
-<p>Recipe:</p>
-<% @cocktail.doses.each do |dose| %>
-  <p>- <%= dose.description %> of <%= dose.ingredient.name %> </p>
-  <button type="button" class="btn btn-danger"><%= link_to "Delete", dose_path(dose), method: :delete %></button>
-<% end %>
-<p><%= link_to "Add a dose", new_cocktail_dose_path(@cocktail) %></p>
+<div class="show-page">
+  <div class="show-content-left">
+    <div class="container show-content text-center">
+      <h1><%= @cocktail.name %></h1>
+      <h3>Recipe:</h3>
+      <% @cocktail.doses.each do |dose| %>
+        <div class="dose-content">
+          <p><%= dose.description %> of <%= dose.ingredient.name %>     <%= link_to "Delete", dose_path(dose), method: :delete, class: "badge badge-primary" %></p>
+        </div>
+      <% end %>
+      <p><%= link_to "Add a dose", new_cocktail_dose_path(@cocktail), class: "btn btn-outline-secondary"%></p>
+    </div>
+  </div>
+  <div class="show-image background-image" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('<%= cl_image_path @cocktail.photo, crop: :fill if @cocktail.photo.present?%>'); width: 50vw; height: calc(100vh - 70px)"></div>
+</div>

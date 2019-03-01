@@ -1,11 +1,9 @@
 <div class="cards padding">
   <% @cocktails.each do |cocktail| %>
-    <div class="card" style="width: 18rem; background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
-         url('<%= cl_image_path cocktail.photo, height: 300, width: 400, crop: :fill if cocktail.photo.present?%>')">
-      <div class="card-img-top" style="background-color: #254667; height: 15px"></div>
+    <div class="card main-card background-image" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('<%= cl_image_path cocktail.photo, crop: :fill if cocktail.photo.present?%>')">
       <div class="card-body">
         <h5 class="card-title"><%=cocktail.name %></h5>
-        <p class="card-text"><%= link_to "Recipe", cocktail_path(cocktail) %></p>
+        <p class="card-text"><%= link_to "Recipe", cocktail_path(cocktail), class: "btn btn-outline-light" %></p>
       </div>
     </div>
   <% end %>

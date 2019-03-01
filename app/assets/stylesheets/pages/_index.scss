@@ -1,2 +1,21 @@
 // Import page-specific CSS files here.
 @import "home";
+
+.main-card {
+  color: white;
+  width: 25%;
+  height: 200px;
+  border-radius: 2%;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.card-text {
+  position: absolute;
+  top: 15px;
+  right: 30px;
+}
